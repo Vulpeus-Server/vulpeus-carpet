@@ -11,7 +11,7 @@ public class VulpeusCarpetSettings {
   private static final String PROTOCOL = "protocol";
 
   @Rule(
-      desc = "Enable /view command to changes the view distance of the server without op",
+      desc = "Enable /view command to changes the view distance of the server without op.",
       category = {SURVIVAL, COMMAND, VULPEUS})
   public static String commandView = "ops";
 
