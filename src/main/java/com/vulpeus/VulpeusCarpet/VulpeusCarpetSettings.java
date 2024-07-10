@@ -14,4 +14,9 @@ public class VulpeusCarpetSettings {
       desc = "Enable /view command to changes the view distance of the server without op",
       category = {SURVIVAL, COMMAND, VULPEUS})
   public static String commandView = "ops";
+
+  @Rule(
+      desc = "Allows you to equip items to your head slot using /hat. Ported from EssentialAddons.",
+      category = {SURVIVAL, COMMAND, VULPEUS})
+  public static String commandHat = "ops";
 }

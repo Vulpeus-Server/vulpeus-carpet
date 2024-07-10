@@ -1,7 +1,5 @@
 package com.vulpeus.VulpeusCarpet.utils;
 
-// import com.vulpeus.VulpeusCarpet.TaichiCarpetSettings;
-// import com.vulpeus.VulpeusCarpet.logging.HUD.notice;
 import java.util.Objects;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
