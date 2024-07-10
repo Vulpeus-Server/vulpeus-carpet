@@ -24,4 +24,9 @@ public class VulpeusCarpetSettings {
       desc = "Player can sit down when using /sit. Ported from PCA.",
       category = {SURVIVAL, COMMAND, VULPEUS})
   public static String commandSit = "ops";
+
+  @Rule(
+      desc = "Optimize dragon respawn method. Ported from carpet AMS addition.",
+      category = {OPTIMIZATION, VULPEUS})
+  public static boolean optimizedDragonRespawn = false;
 }
