@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "vulpeus-carpet",
+  "version": "${version}",
+  "name": "vulpeus-carpet",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/vulpeus-carpet/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.vulpeus.VulpeusCarpet.VulpeusCarpetExtension"]
+  },
+  "mixins": ["vulpeus-carpet.mixins.json"],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/craftershub"
+      },
+      "parent": "carpet"
+    }
+  }
+}

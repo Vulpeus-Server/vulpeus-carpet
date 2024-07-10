@@ -1,0 +1,17 @@
+{
+  "google-java-format.executable-path": "/usr/local/bin/google-java-format-1.15.0-linux-x86_64",
+  "java.checkstyle.configuration": "${workspaceFolder}/google_checks.xml",
+  "java.checkstyle.version": "10.17.0",
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.settings.url": ".vscode/java_settings.prefs",
+  
+  "[java]": {
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ilkka.google-java-format",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "editor.tabSize": 4,
+}
