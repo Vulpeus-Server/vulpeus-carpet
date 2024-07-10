@@ -51,5 +51,6 @@ public class VulpeusCarpetExtension implements CarpetExtension, ModInitializer {
   public void registerCommands(CommandDispatcher<ServerCommandSource> dispatcher) {
     viewCommand.register(dispatcher);
     hatCommand.register(dispatcher);
+    sitCommand.register(dispatcher);
   }
 }

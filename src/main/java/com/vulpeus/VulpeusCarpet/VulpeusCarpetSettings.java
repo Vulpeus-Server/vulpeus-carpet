@@ -19,4 +19,9 @@ public class VulpeusCarpetSettings {
       desc = "Allows you to equip items to your head slot using /hat. Ported from EssentialAddons.",
       category = {SURVIVAL, COMMAND, VULPEUS})
   public static String commandHat = "ops";
+
+  @Rule(
+      desc = "Player can sit down when using /sit. Ported from PCA.",
+      category = {SURVIVAL, COMMAND, VULPEUS})
+  public static String commandSit = "ops";
 }
