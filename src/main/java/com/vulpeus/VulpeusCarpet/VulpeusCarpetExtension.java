@@ -44,9 +44,6 @@ public class VulpeusCarpetExtension implements CarpetExtension, ModInitializer {
   @Override
   public void onGameStarted() {
     CarpetServer.settingsManager.parseSettingsClass(VulpeusCarpetSettings.class);
-
-    System.out.println(MOD_NAME);
-    System.out.println(MOD_VERSION);
   }
 
   @Override
