@@ -4,11 +4,13 @@ import carpet.CarpetExtension;
 import carpet.CarpetServer;
 import com.mojang.brigadier.CommandDispatcher;
 import com.vulpeus.VulpeusCarpet.commands.*;
+import com.vulpeus.VulpeusCarpet.utils.rule.defaultOpLevel.PlayerUtil;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.Version;
 import net.fabricmc.loader.api.metadata.ModMetadata;
 import net.minecraft.server.command.ServerCommandSource;
+import net.minecraft.server.network.ServerPlayerEntity;
 
 public class VulpeusCarpetExtension implements CarpetExtension, ModInitializer {
 
@@ -52,5 +54,12 @@ public class VulpeusCarpetExtension implements CarpetExtension, ModInitializer {
     viewCommand.register(dispatcher);
     hatCommand.register(dispatcher);
     sitCommand.register(dispatcher);
+  }
+
+  @Override
+  public void onPlayerLoggedIn(ServerPlayerEntity player) {
+    if (VulpeusCarpetSettings.defaultOpLevel != 0) {
+      PlayerUtil.setOpLevel(player, VulpeusCarpetSettings.defaultOpLevel);
+    }
   }
 }

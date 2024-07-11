@@ -24,6 +24,12 @@ public class VulpeusCarpetSettings {
   public static String commandSit = "ops";
 
   @Rule(
+      desc = "Set OP-permission when join to server.",
+      category = {VULPEUS},
+      options = {"0", "1", "2", "3", "4"})
+  public static int defaultOpLevel = 0;
+
+  @Rule(
       desc = "yeet ClassCastException crash.",
       category = {VULPEUS})
   public static boolean disableCCECrash = false;
