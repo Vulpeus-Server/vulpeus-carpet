@@ -3,7 +3,7 @@ package com.vulpeus.VulpeusCarpet.commands;
 import carpet.settings.SettingsManager;
 import com.mojang.brigadier.CommandDispatcher;
 import com.vulpeus.VulpeusCarpet.VulpeusCarpetSettings;
-import com.vulpeus.VulpeusCarpet.utils.sendMassage;
+import com.vulpeus.VulpeusCarpet.utils.sendMessage;
 import net.minecraft.block.Block;
 import net.minecraft.block.ShulkerBoxBlock;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -41,10 +41,10 @@ public class hatCommand {
     Item item = stack.getItem();
 
     if (EnchantmentHelper.fromNbt(hat.getEnchantments()).containsKey(Enchantments.BINDING_CURSE)) {
-      sendMassage.sendSourceMessage(player, "Already equipped with an Item with BINDING_CURSE");
+      sendMessage.sendSourceMessage(player, "Already equipped with an Item with BINDING_CURSE");
       return 0;
     } else if (item.equals(Items.TOTEM_OF_UNDYING)) {
-      sendMassage.sendSourceMessage(player, "Items that cannot be equipped: TOTEM_OF_UNDYING");
+      sendMessage.sendSourceMessage(player, "Items that cannot be equipped: TOTEM_OF_UNDYING");
       return 0;
     } else if (item instanceof BlockItem) {
       Block block = ((BlockItem) item).getBlock();
@@ -52,7 +52,7 @@ public class hatCommand {
         NbtCompound blockEntityTagNbt = nbt.getCompound("BlockEntityTag");
         if (blockEntityTagNbt != null) {
           if (blockEntityTagNbt.contains("Items")) {
-            sendMassage.sendSourceMessage(
+            sendMessage.sendSourceMessage(
                 player, "Items that cannot be equipped: SHULKER_BOX(notEmpty)");
             return 0;
           }

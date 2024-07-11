@@ -27,4 +27,14 @@ public class VulpeusCarpetSettings {
       desc = "Optimize dragon respawn method. Ported from carpet AMS addition.",
       category = {OPTIMIZATION, VULPEUS})
   public static boolean optimizedDragonRespawn = false;
+
+  @Rule(
+      desc = "yeet ClassCastException crash.",
+      category = {VULPEUS})
+  public static boolean disableCCECrash = false;
+
+  @Rule(
+      desc = "yeet StackOverflowError crash.",
+      category = {VULPEUS})
+  public static boolean disableSOFCrash = false;
 }

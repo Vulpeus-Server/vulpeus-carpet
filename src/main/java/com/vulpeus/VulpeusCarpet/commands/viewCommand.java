@@ -8,7 +8,7 @@ import carpet.settings.SettingsManager;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.vulpeus.VulpeusCarpet.VulpeusCarpetSettings;
-import com.vulpeus.VulpeusCarpet.utils.sendMassage;
+import com.vulpeus.VulpeusCarpet.utils.sendMessage;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
@@ -37,7 +37,7 @@ public class viewCommand {
     server.getPlayerManager().setViewDistance(distance);
     CarpetSettings.viewDistance = distance;
 
-    sendMassage.sendGlobalMessage(source.getPlayer(), "viewDistance is now " + distance);
+    sendMessage.sendGlobalMessage(server, "viewDistance is now " + distance);
 
     return 1;
   }
