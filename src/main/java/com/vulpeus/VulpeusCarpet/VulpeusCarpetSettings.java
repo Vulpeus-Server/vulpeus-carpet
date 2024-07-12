@@ -39,7 +39,7 @@ public class VulpeusCarpetSettings {
   @Rule(
       desc = "yeet the server crash caused by StackOverflowError.",
       category = {VULPEUS})
-  public static boolean disableSOFCrash = false;
+  public static boolean disableSOECrash = false;
 
   @Rule(
       desc = "Optimize dragon respawn method. Ported from carpet AMS addition.",

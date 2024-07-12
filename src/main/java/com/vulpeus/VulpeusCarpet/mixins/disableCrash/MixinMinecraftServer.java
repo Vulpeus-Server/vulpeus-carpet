@@ -38,9 +38,9 @@ public class MixinMinecraftServer {
       sendMessage.sendGlobalMessage((MinecraftServer) (Object) this, "now CCE Crashed.");
       return;
     }
-    if (VulpeusCarpetSettings.disableSOFCrash && causeErr instanceof StackOverflowError) {
+    if (VulpeusCarpetSettings.disableSOECrash && causeErr instanceof StackOverflowError) {
       ci.cancel();
-      sendMessage.sendGlobalMessage((MinecraftServer) (Object) this, "now SOF Crashed.");
+      sendMessage.sendGlobalMessage((MinecraftServer) (Object) this, "now SOE Crashed.");
       return;
     }
   }

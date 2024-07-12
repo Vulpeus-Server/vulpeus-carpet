@@ -45,7 +45,7 @@ yeet the server crash caused by ClassCastException.
 - Default value: `false`
 - Categories: `VULPEUS`
 
-### disableSOFCrash
+### disableSOECrash
 
 yeet the server crash caused by StackOverflowError.
 - Type: `boolean`
