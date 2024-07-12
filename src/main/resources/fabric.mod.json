@@ -3,9 +3,14 @@
   "id": "vulpeus-carpet",
   "version": "${version}",
   "name": "vulpeus-carpet",
-  "description": "",
-  "authors": [],
-  "contact": {},
+  "description": "carpet addition made for vulpeus. Supported version is only main version of our server.",
+  "authors": [
+    "topi_banana",
+    "rs256"
+  ],
+  "contact": {
+    "repo": "https://github.com/Vulpeus-Server/vulpeus-carpet"
+  },
   "license": "MIT",
   "icon": "assets/vulpeus-carpet/icon.png",
   "environment": "*",
@@ -15,13 +20,13 @@
   "mixins": ["vulpeus-carpet.mixins.json"],
   "depends": {
     "fabricloader": ">=${loader_version}",
-    "fabric": "*",
     "minecraft": "${minecraft_version}"
   },
   "custom": {
     "modmenu": {
       "links": {
-        "modmenu.discord": "https://discord.gg/craftershub"
+        "modmenu.discord": "https://discord.gg/craftershub",
+        "modmenu.modrinth": "https://modrinth.com/project/vulpeus-carpet"
       },
       "parent": "carpet"
     }
