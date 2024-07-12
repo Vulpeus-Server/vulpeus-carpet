@@ -2,14 +2,15 @@
   "schemaVersion": 1,
   "id": "vulpeus-carpet",
   "version": "${version}",
-  "name": "vulpeus-carpet",
+  "name": "Vulpeus Carpet",
   "description": "carpet addition made for vulpeus. Supported version is only main version of our server.",
   "authors": [
     "topi_banana",
     "rs256"
   ],
   "contact": {
-    "repo": "https://github.com/Vulpeus-Server/vulpeus-carpet"
+    "issues": "https://github.com/Vulpeus-Server/vulpeus-carpet/issues",
+    "sources": "https://github.com/Vulpeus-Server/vulpeus-carpet"
   },
   "license": "MIT",
   "icon": "assets/vulpeus-carpet/icon.png",
