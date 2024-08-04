@@ -10,6 +10,7 @@ Show rules only in the latest release or current development version.
 ### commandHat
 
 Enable `/hat` command. Ported from essential addons.
+
 - Type: `String`
 - Default value: `ops`
 - Allowed options: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
@@ -18,6 +19,7 @@ Enable `/hat` command. Ported from essential addons.
 ### commandSit
 
 Enable `/sit` command. Ported from PCA.
+
 - Type: `String`
 - Default value: `ops`
 - Allowed options: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
@@ -26,6 +28,7 @@ Enable `/sit` command. Ported from PCA.
 ### commandView
 
 Enable `/view` command to change viewDistance of carpet.
+
 - Type: `String`
 - Default value: `ops`
 - Allowed options: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
@@ -33,7 +36,9 @@ Enable `/view` command to change viewDistance of carpet.
 
 ### defaultOpLevel
 
-Set the OP level granted when you join the server. can be re-granted by rejoining and can override `op-permission-level` in the server.properties.
+Set the OP level granted when you join the server. can be re-granted by rejoining and can
+override `op-permission-level` in the server.properties.
+
 - Type: `int`
 - Default value: `0`
 - Categories: `CREATIVE`,`VULPEUS`
@@ -41,6 +46,7 @@ Set the OP level granted when you join the server. can be re-granted by rejoinin
 ### disableCCECrash
 
 yeet the server crash caused by ClassCastException.
+
 - Type: `boolean`
 - Default value: `false`
 - Categories: `VULPEUS`
@@ -48,6 +54,7 @@ yeet the server crash caused by ClassCastException.
 ### disableSOECrash
 
 yeet the server crash caused by StackOverflowError.
+
 - Type: `boolean`
 - Default value: `false`
 - Categories: `VULPEUS`
@@ -57,6 +64,7 @@ yeet the server crash caused by StackOverflowError.
 Optimize dragon respawn method. Ported from carpet AMS addition.
 > [!WARNING]
 > Couldn’t ensure same behavior as vanilla Minecraft after enabling this rule.
+
 - Type: `boolean`
 - Default value: `false`
 - Categories: `OPTIMIZATION`, `VULPEUS`
@@ -65,7 +73,9 @@ Optimize dragon respawn method. Ported from carpet AMS addition.
 
 ### hat
 
-`/hat` : Equip the item you have on your own head. Totem of undying or non-empty shulker box cannot be equipped.Also you cannot use this command if you already equip the item enchanted curse of binding.
+`/hat` : Equip the item you have on your own head. Totem of undying or non-empty shulker box cannot
+be equipped.Also you cannot use this command if you already equip the item enchanted curse of
+binding.
 
 ### sit
 
@@ -78,3 +88,13 @@ Optimize dragon respawn method. Ported from carpet AMS addition.
 `/view [<distance>]` : change the value of viewDistance in carpet
 
 `[<distance>]` : must be between `0` to `32`
+
+### playerActions
+
+`/player [<name>] fill [<state>]`
+
+`/player [<name>] clean [<state>]`
+
+`[<name>]` : fake player name
+
+`[<state>]` : `true` or `false`
