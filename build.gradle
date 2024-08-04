@@ -29,7 +29,9 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     modImplementation "maven.modrinth:carpet:${project.carpet_version}"
-	// modImplementation "com.github.gnembon:fabric-carpet:${project.carpet_version}"
+
+    modCompileOnly "maven.modrinth:modmenu:${project.modmenu_version}"
+    modCompileOnly "maven.modrinth:mods-command:${project.modscommand_version}"
 }
 
 processResources {

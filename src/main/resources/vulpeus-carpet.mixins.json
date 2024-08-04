@@ -4,10 +4,12 @@
   "package": "com.vulpeus.VulpeusCarpet.mixins",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "disableCrash.MixinMinecraftServer",
     "commandSit.MixinArmorStandEntity",
+    "disableCrash.MixinMinecraftServer",
     "optimizedDragonRespawn.IMixinBlockPatternTestTransform",
-    "optimizedDragonRespawn.MixinEnderDragonFight"
+    "optimizedDragonRespawn.MixinEnderDragonFight",
+    "playerActions.PlayerCommandMixin",
+    "playerActions.ServerPlayerEntityMixin"
   ],
   "client": [
   ],
