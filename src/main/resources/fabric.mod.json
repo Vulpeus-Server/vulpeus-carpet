@@ -4,29 +4,40 @@
   "version": "${version}",
 
   "name": "${name}",
-  "description": "Template for my fabric mods",
+  "description": "carpet addition made for vulpeus.",
   "authors": [
-    "Fallen_Breath"
+    "VulpeusServer"
   ],
   "contact": {
-    "homepage": "https://modrinth.com",
-    "sources": "https://github.com/Fallen-Breath/fabric-mod-template"
+    "homepage": "https://vulpeus.com",
+    "issues": "https://github.com/Vulpeus-Server/vulpeus-carpet/issues",
+    "sources": "https://github.com/Vulpeus-Server/vulpeus-carpet"
   },
 
-  "icon": "assets/template_mod/icon.png",
+  "icon": "assets/vulpeus_carpet/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "me.fallenbreath.template_mod.TemplateMod"
+      "com.vulpeus.vulpeus_carpet.VulpeusCarpetExtension"
     ]
   },
   "mixins": [
-    "template_mod.mixins.json"
+    "vulpeus_carpet.mixins.json"
   ],
 
   "depends": {
     "fabricloader": ">=0.11.4",
     "minecraft": "${minecraft_dependency}"
+  },
+
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/craftershub",
+        "modmenu.modrinth": "https://modrinth.com/project/vulpeus-carpet"
+      },
+      "parent": "carpet"
+    }
   }
 }

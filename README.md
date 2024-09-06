@@ -1,4 +1,9 @@
-# Vulpeus carpet addition
+# Vulpeus Carpet
+
+[![License](https://img.shields.io/github/license/Vulpeus-Server/vulpeus-carpet.svg)](http://www.gnu.org/licenses/lgpl-3.0.html)
+[![Issues](https://img.shields.io/github/issues/Vulpeus-Server/vulpeus-carpet.svg)](https://github.com/Vulpeus-Server/vulpeus-carpet/issues)
+[![workflow](https://github.com/Vulpeus-Server/vulpeus-carpet/actions/workflows/gradle.yml/badge.svg)](https://github.com/Vulpeus-Server/vulpeus-carpet/actions/workflows/gradle.yml)
+[![Modrinth](https://img.shields.io/modrinth/dt/aZhtZo3k?label=Modrinth%20Downloads)](https://modrinth.com/mod/vulpeus-carpet)
 
 carpet addition made for vulpeus.
 Supported version is only main version of our server.

@@ -1,0 +1,25 @@
+carpet:
+  category:
+    vulpeus: vulpeus
+
+  rule:
+    commandHat:
+      desc: Enable `/hat` command. Ported from essential addons.
+
+    commandSit:
+      desc: Enable `/sit` command. Ported from PCA.
+
+    commandView:
+      desc: Enable `/view` command to change viewDistance of carpet.
+
+    defaultOpLevel:
+      desc: Set the OP level granted when you join the server. can be re-granted by rejoining and can override `op-permission-level` in the server.properties.
+
+    disableCCECrash:
+      desc: yeet the server crash caused by ClassCastException.
+
+    disableSOECrash:
+      desc: yeet the server crash caused by StackOverflowError.
+
+    optimizedDragonRespawn:
+      desc: Optimize dragon respawn method. Ported from carpet AMS addition.
