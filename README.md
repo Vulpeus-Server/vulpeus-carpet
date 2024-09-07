@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://vulepus.com/" target="_blank">
+  <a href="https://vulpeus.com/" target="_blank">
     <img src="https://vulpeus.com/vulpeus_logo.svg/" alt="https://vulepus.com/" width="256"><br/>
   </a>
   carpet addition made for vulpeus server.<br />
