@@ -20,9 +20,7 @@
 
 package com.vulpeus.vulpeus_carpet;
 
-import static carpet.api.settings.RuleCategory.COMMAND;
-import static carpet.api.settings.RuleCategory.OPTIMIZATION;
-import static carpet.api.settings.RuleCategory.SURVIVAL;
+import static carpet.api.settings.RuleCategory.*;
 
 import carpet.api.settings.Rule;
 
@@ -48,6 +46,12 @@ public class VulpeusCarpetSettings {
   @Rule(categories = {VULPEUS})
   public static boolean disableSOECrash = false;
 
+  //#if MC<=12001
+  //$$ @Rule(categories = {BUGFIX, VULPEUS})
+  //#endif
+  public static boolean fixedTickMemoriesEntityAI = false;
+
   @Rule(categories = {OPTIMIZATION, VULPEUS})
   public static boolean optimizedDragonRespawn = false;
+
 }

@@ -21,5 +21,8 @@ carpet:
     disableSOECrash:
       desc: yeet the server crash caused by StackOverflowError.
 
+    fixedTickMemoriesEntityAI:
+      desc: fixed MC-254100
+
     optimizedDragonRespawn:
       desc: Optimize dragon respawn method. Ported from carpet AMS addition.
