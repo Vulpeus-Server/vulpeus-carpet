@@ -53,6 +53,22 @@ StackOverflowError によるサーバーのクラッシュの無効化。
 - デフォルト: `false`
 - カテゴリー: `VULPEUS`
 
+### fixedFallingBlockCantUseNetherPortal (<=1.20.6)
+
+MC-9644 の修正。
+
+- タイプ: `boolean`
+- デフォルト: `false`
+- カテゴリー: `BUGFIX`, `VULPEUS`
+
+### fixedTickMemoriesEntityAI (<=1.20.1)
+
+MC-254100 の修正
+
+- タイプ: `boolean`
+- デフォルト: `false`
+- カテゴリー: `BUGFIX`, `VULPEUS`
+
 ### optmizedDragonRespawn
 
 エンダードラゴンのリスポーン処理の最適化。carpet AMS addition からの移植。

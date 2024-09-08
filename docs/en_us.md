@@ -52,6 +52,22 @@ yeet the server crash caused by StackOverflowError.
 - Default value: `false`
 - Categories: `VULPEUS`
 
+### fixedFallingBlockCantUseNetherPortal (<=1.20.6)
+
+fixed MC-9644.
+
+- Type: `boolean`
+- Default value: `false`
+- Categories: `BUGFIX`, `VULPEUS`
+
+### fixedTickMemoriesEntityAI (<=1.20.1)
+
+fixed MC-254100.
+
+- Type: `boolean`
+- Default value: `false`
+- Categories: `BUGFIX`, `VULPEUS`
+
 ### optmizedDragonRespawn
 
 Optimize dragon respawn method. Ported from carpet AMS addition.
