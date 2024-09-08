@@ -6,6 +6,7 @@
   "mixins": [
     "commandSit.MixinArmorStandEntity",
     "disableCrash.MixinMinecraftServer",
+    "fixedFallingBlockCantUseNetherPortal.MixinFallingBlockEntity",
     "fixedTickMemoriesEntityAI.MixinMemory",
     "optimizedDragonRespawn.IMixinBlockPatternTestTransform",
     "optimizedDragonRespawn.MixinEnderDragonFight",
