@@ -53,6 +53,14 @@ StackOverflowError によるサーバーのクラッシュの無効化。
 - デフォルト: `false`
 - カテゴリー: `VULPEUS`
 
+### fixedBeeNotLeavingHive (<=1.21.1)
+
+MC-168329 の修正。
+
+- タイプ: `boolean`
+- デフォルト: `false`
+- カテゴリー: `BUGFIX`, `VULPEUS`
+
 ### fixedFallingBlockCantUseNetherPortal (<=1.20.6)
 
 MC-9644 の修正。

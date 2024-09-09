@@ -46,6 +46,11 @@ public class VulpeusCarpetSettings {
   @Rule(categories = {VULPEUS})
   public static boolean disableSOECrash = false;
 
+  //#if MC<=12101
+  //$$ @Rule(categories = {BUGFIX, VULPEUS})
+  //#endif
+  public static boolean fixedBeeNotLeavingHive = false;
+
   //#if MC<=12006
   //$$ @Rule(categories = {BUGFIX, VULPEUS})
   //#endif

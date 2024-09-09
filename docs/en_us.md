@@ -52,6 +52,14 @@ yeet the server crash caused by StackOverflowError.
 - Default value: `false`
 - Categories: `VULPEUS`
 
+### fixedBeeNotLeavingHive (<=1.21.1)
+
+fixed MC-168329.
+
+- Type: `boolean`
+- Default value: `false`
+- Categories: `BUGFIX`, `VULPEUS`
+
 ### fixedFallingBlockCantUseNetherPortal (<=1.20.6)
 
 fixed MC-9644.

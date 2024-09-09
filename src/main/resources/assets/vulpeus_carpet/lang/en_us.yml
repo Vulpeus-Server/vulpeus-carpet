@@ -21,6 +21,9 @@ carpet:
     disableSOECrash:
       desc: yeet the server crash caused by StackOverflowError.
 
+    fixedBeeNotLeavingHive:
+      desc: fixed MC-168329
+
     fixedFallingBlockCantUseNetherPortal:
       desc: fixed MC-9644
 
