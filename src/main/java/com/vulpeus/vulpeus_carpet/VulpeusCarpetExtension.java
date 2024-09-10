@@ -22,12 +22,20 @@ package com.vulpeus.vulpeus_carpet;
 
 import carpet.CarpetExtension;
 import carpet.CarpetServer;
+import carpet.script.CarpetScriptServer;
+import carpet.script.Module;
 import carpet.utils.Translations;
 import com.mojang.brigadier.CommandDispatcher;
 import com.vulpeus.vulpeus_carpet.commands.hatCommand;
 import com.vulpeus.vulpeus_carpet.commands.sitCommand;
 import com.vulpeus.vulpeus_carpet.commands.viewCommand;
+import com.vulpeus.vulpeus_carpet.utils.ScriptCollection;
 import com.vulpeus.vulpeus_carpet.utils.rule.defaultOpLevel.PlayerUtil;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Path;
 import java.util.Map;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
@@ -45,6 +53,8 @@ public class VulpeusCarpetExtension implements CarpetExtension, ModInitializer {
 	public static final String MOD_NAME;
 	public static final Version MOD_VERSION;
 	public static final GameVersion GAME_VERSION;
+	public static final String ASSETS_PATH;
+	public static final ClassLoader CLASS_LOADER;
 
 	static {
 		ModMetadata metadata =
@@ -55,6 +65,10 @@ public class VulpeusCarpetExtension implements CarpetExtension, ModInitializer {
 		MOD_NAME = metadata.getName();
 		MOD_VERSION = metadata.getVersion();
 		GAME_VERSION = MinecraftVersion.CURRENT;
+
+		ASSETS_PATH = String.format("assets/%s", MOD_ID);
+
+		CLASS_LOADER = VulpeusCarpetExtension.class.getClassLoader();
 	}
 
 	public static void loadExtension() {
@@ -74,6 +88,7 @@ public class VulpeusCarpetExtension implements CarpetExtension, ModInitializer {
 	@Override
 	public void onGameStarted() {
 		CarpetServer.settingsManager.parseSettingsClass(VulpeusCarpetSettings.class);
+		ScriptCollection.load();
 	}
 
 	@Override
@@ -93,6 +108,7 @@ public class VulpeusCarpetExtension implements CarpetExtension, ModInitializer {
 	@Override
 	public Map<String, String> canHasTranslations(String lang) {
 		return Translations.getTranslationFromResourcePath(
-				String.format("assets/%s/lang/%s.json", MOD_ID, lang));
+				String.format("%s/lang/%s.json", ASSETS_PATH, lang)
+		);
 	}
 }
