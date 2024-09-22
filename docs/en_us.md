@@ -1,5 +1,14 @@
 ## Rules
 
+### commandCustomLoad
+
+Enable `/custom-load` command. Inspired by AMS blockChunkLoader.
+
+- Type: `String`
+- Default value: `ops`
+- Allowed options: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
+- Categories: `SURVIVAL`, `COMMAND`, `VULPEUS`
+
 ### commandHat
 
 Enable `/hat` command. Ported from essential addons.
@@ -52,6 +61,30 @@ yeet the server crash caused by StackOverflowError.
 - Default value: `false`
 - Categories: `VULPEUS`
 
+### fixedBeeNotLeavingHive (<=1.21.1)
+
+fixed MC-168329.
+
+- Type: `boolean`
+- Default value: `false`
+- Categories: `BUGFIX`, `VULPEUS`
+
+### fixedFallingBlockCantUseNetherPortal (<=1.20.6)
+
+fixed MC-9644.
+
+- Type: `boolean`
+- Default value: `false`
+- Categories: `BUGFIX`, `VULPEUS`
+
+### fixedTickMemoriesEntityAI (<=1.20.1)
+
+fixed MC-254100.
+
+- Type: `boolean`
+- Default value: `false`
+- Categories: `BUGFIX`, `VULPEUS`
+
 ### optmizedDragonRespawn
 
 Optimize dragon respawn method. Ported from carpet AMS addition.
@@ -63,6 +96,30 @@ Optimize dragon respawn method. Ported from carpet AMS addition.
 - Categories: `OPTIMIZATION`, `VULPEUS`
 
 ## Command
+
+### custom-load
+
+`/custom-load` : Show current custom loading chunk list.
+
+`/custom-load add [<dimension>] [<cx>] [<cz>] [<radius>]` : add to list.
+
+`/custom-load remove [<dimension>] [<index>]` : remove from list.
+
+`[<dimension>]` : dimension id
+
+`[<cx>]` : x of the chunk at the center of the loading range.
+
+`[<cz>]` : z of the chunk at the center of the loading range.
+
+`[<radius>]` : radius
+
+`[<index>]` : index of the list. you can check it with `/custom-load`.
+
+### hat
+
+`/hat` : Equip the item you have on your own head. Totem of undying or non-empty shulker box cannot
+be equipped.Also you cannot use this command if you already equip the item enchanted curse of
+binding.
 
 ### hat
 

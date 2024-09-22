@@ -3,6 +3,9 @@ carpet:
     vulpeus: vulpeus
 
   rule:
+    commandCustomLoad:
+      desc: Enable `/custom-load` command. Inspired by AMS blockChunkLoader.
+
     commandHat:
       desc: Enable `/hat` command. Ported from essential addons.
 
@@ -20,6 +23,15 @@ carpet:
 
     disableSOECrash:
       desc: yeet the server crash caused by StackOverflowError.
+
+    fixedBeeNotLeavingHive:
+      desc: fixed MC-168329
+
+    fixedFallingBlockCantUseNetherPortal:
+      desc: fixed MC-9644
+
+    fixedTickMemoriesEntityAI:
+      desc: fixed MC-254100
 
     optimizedDragonRespawn:
       desc: Optimize dragon respawn method. Ported from carpet AMS addition.

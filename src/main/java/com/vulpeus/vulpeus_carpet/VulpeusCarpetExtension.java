@@ -24,10 +24,14 @@ import carpet.CarpetExtension;
 import carpet.CarpetServer;
 import carpet.utils.Translations;
 import com.mojang.brigadier.CommandDispatcher;
+import com.vulpeus.vulpeus_carpet.commands.customLoadCommand;
 import com.vulpeus.vulpeus_carpet.commands.hatCommand;
 import com.vulpeus.vulpeus_carpet.commands.sitCommand;
 import com.vulpeus.vulpeus_carpet.commands.viewCommand;
+import com.vulpeus.vulpeus_carpet.utils.rule.commandCustomLoad.CustomLoadingChunks;
+import com.vulpeus.vulpeus_carpet.utils.ScriptCollection;
 import com.vulpeus.vulpeus_carpet.utils.rule.defaultOpLevel.PlayerUtil;
+import java.io.IOException;
 import java.util.Map;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
@@ -36,6 +40,7 @@ import net.fabricmc.loader.api.metadata.ModMetadata;
 import net.minecraft.GameVersion;
 import net.minecraft.MinecraftVersion;
 import net.minecraft.command.CommandRegistryAccess;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
 
@@ -45,6 +50,8 @@ public class VulpeusCarpetExtension implements CarpetExtension, ModInitializer {
 	public static final String MOD_NAME;
 	public static final Version MOD_VERSION;
 	public static final GameVersion GAME_VERSION;
+	public static final String ASSETS_PATH;
+	public static final ClassLoader CLASS_LOADER;
 
 	static {
 		ModMetadata metadata =
@@ -55,6 +62,10 @@ public class VulpeusCarpetExtension implements CarpetExtension, ModInitializer {
 		MOD_NAME = metadata.getName();
 		MOD_VERSION = metadata.getVersion();
 		GAME_VERSION = MinecraftVersion.CURRENT;
+
+		ASSETS_PATH = String.format("assets/%s", MOD_ID);
+
+		CLASS_LOADER = VulpeusCarpetExtension.class.getClassLoader();
 	}
 
 	public static void loadExtension() {
@@ -74,10 +85,30 @@ public class VulpeusCarpetExtension implements CarpetExtension, ModInitializer {
 	@Override
 	public void onGameStarted() {
 		CarpetServer.settingsManager.parseSettingsClass(VulpeusCarpetSettings.class);
+		ScriptCollection.load();
+	}
+
+	@Override
+	public void onServerLoadedWorlds(MinecraftServer server) {
+		try {
+			System.out.println(server);
+			CustomLoadingChunks.importConfig(server);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	@Override
+	public void onServerClosed(MinecraftServer server) {
+		try {
+			CustomLoadingChunks.exportConfig(server);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
 	}
 
 	@Override
 	public void registerCommands(CommandDispatcher<ServerCommandSource> dispatcher, CommandRegistryAccess commandRegistryAccess) {
+		customLoadCommand.register(dispatcher);
 		viewCommand.register(dispatcher);
 		hatCommand.register(dispatcher);
 		sitCommand.register(dispatcher);
@@ -91,8 +122,13 @@ public class VulpeusCarpetExtension implements CarpetExtension, ModInitializer {
 	}
 
 	@Override
+	public void onTick(MinecraftServer server){
+	}
+
+	@Override
 	public Map<String, String> canHasTranslations(String lang) {
 		return Translations.getTranslationFromResourcePath(
-				String.format("assets/%s/lang/%s.json", MOD_ID, lang));
+				String.format("%s/lang/%s.json", ASSETS_PATH, lang)
+		);
 	}
 }
