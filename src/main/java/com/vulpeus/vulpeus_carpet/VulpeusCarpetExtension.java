@@ -24,11 +24,14 @@ import carpet.CarpetExtension;
 import carpet.CarpetServer;
 import carpet.utils.Translations;
 import com.mojang.brigadier.CommandDispatcher;
+import com.vulpeus.vulpeus_carpet.commands.customLoadCommand;
 import com.vulpeus.vulpeus_carpet.commands.hatCommand;
 import com.vulpeus.vulpeus_carpet.commands.sitCommand;
 import com.vulpeus.vulpeus_carpet.commands.viewCommand;
+import com.vulpeus.vulpeus_carpet.utils.rule.commandCustomLoad.CustomLoadingChunks;
 import com.vulpeus.vulpeus_carpet.utils.ScriptCollection;
 import com.vulpeus.vulpeus_carpet.utils.rule.defaultOpLevel.PlayerUtil;
+import java.io.IOException;
 import java.util.Map;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
@@ -37,6 +40,7 @@ import net.fabricmc.loader.api.metadata.ModMetadata;
 import net.minecraft.GameVersion;
 import net.minecraft.MinecraftVersion;
 import net.minecraft.command.CommandRegistryAccess;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
 
@@ -85,7 +89,26 @@ public class VulpeusCarpetExtension implements CarpetExtension, ModInitializer {
 	}
 
 	@Override
+	public void onServerLoadedWorlds(MinecraftServer server) {
+		try {
+			System.out.println(server);
+			CustomLoadingChunks.importConfig(server);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	@Override
+	public void onServerClosed(MinecraftServer server) {
+		try {
+			CustomLoadingChunks.exportConfig(server);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	@Override
 	public void registerCommands(CommandDispatcher<ServerCommandSource> dispatcher, CommandRegistryAccess commandRegistryAccess) {
+		customLoadCommand.register(dispatcher);
 		viewCommand.register(dispatcher);
 		hatCommand.register(dispatcher);
 		sitCommand.register(dispatcher);
@@ -96,6 +119,10 @@ public class VulpeusCarpetExtension implements CarpetExtension, ModInitializer {
 		if (VulpeusCarpetSettings.defaultOpLevel != 0) {
 			PlayerUtil.setOpLevel(player, VulpeusCarpetSettings.defaultOpLevel);
 		}
+	}
+
+	@Override
+	public void onTick(MinecraftServer server){
 	}
 
 	@Override

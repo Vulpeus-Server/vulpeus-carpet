@@ -1,5 +1,14 @@
 ## Rules
 
+### commandCustomLoad
+
+Enable `/custom-load` command. Inspired by AMS blockChunkLoader.
+
+- Type: `String`
+- Default value: `ops`
+- Allowed options: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
+- Categories: `SURVIVAL`, `COMMAND`, `VULPEUS`
+
 ### commandHat
 
 Enable `/hat` command. Ported from essential addons.
@@ -87,6 +96,12 @@ Optimize dragon respawn method. Ported from carpet AMS addition.
 - Categories: `OPTIMIZATION`, `VULPEUS`
 
 ## Command
+
+### hat
+
+`/hat` : Equip the item you have on your own head. Totem of undying or non-empty shulker box cannot
+be equipped.Also you cannot use this command if you already equip the item enchanted curse of
+binding.
 
 ### hat
 

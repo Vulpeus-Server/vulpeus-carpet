@@ -3,6 +3,9 @@ carpet:
     vulpeus: vulpeus
 
   rule:
+    commandCustomLoad:
+      desc: Enable `/custom-load` command. Inspired by AMS blockChunkLoader.
+
     commandHat:
       desc: Enable `/hat` command. Ported from essential addons.
 

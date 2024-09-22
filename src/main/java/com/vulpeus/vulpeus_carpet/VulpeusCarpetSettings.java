@@ -28,6 +28,9 @@ public class VulpeusCarpetSettings {
 
   private static final String VULPEUS = "vulpeus";
 
+  @Rule(categories = {OPTIMIZATION, COMMAND, VULPEUS})
+  public static String commandCustomLoad = "ops";
+
   @Rule(categories = {SURVIVAL, COMMAND, VULPEUS})
   public static String commandHat = "ops";
 
