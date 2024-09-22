@@ -34,6 +34,9 @@ public class ScriptCollection {
 
 	public static void load() {
 		URL scripts = CLASS_LOADER.getResource(String.format("%s/scripts/", ASSETS_PATH));
+		if (scripts == null) {
+			return;
+		}
 		File scriptDir = new File(scripts.getPath());
 		File[] scriptFiles = scriptDir.listFiles();
 		for (File scriptFile : scriptFiles) {
