@@ -1,5 +1,14 @@
 ## ルール
 
+### commandCustomLoad
+
+`/custom-load`コマンドの有効化。AMS の blockChunkLoader から発想を得ました。
+
+- Type: `String`
+- Default value: `ops`
+- Allowed options: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
+- Categories: `SURVIVAL`, `COMMAND`, `VULPEUS`
+
 ### commandHat
 
 `/hat`コマンドの有効化。essential addons からの移植。
@@ -89,8 +98,25 @@ MC-254100 の修正
 
 ## コマンド
 
-### hat
+### custom-load
 
+`/custom-load` : 現在の CustomLoadingChunk のリストを表示。
+
+`/custom-load add [<dimension>] [<cx>] [<cz>] [<size>]` : リストに追加
+
+`/custom-load remove [<dimension>] [<index>]` : リストから削除
+
+`[<dimension>]` : ディメンションID
+
+`[<cx>]` : ロード範囲の中心チャンクの ChunkX
+
+`[<cz>]` : ロード範囲の中心チャンクの ChunkZ
+
+`[<size>]` : 半径
+
+`[<index>]` : 要素のインデックス。`/custom-load`で確認できます。
+
+### hat
 
 `/hat` : 頭に所持しているアイテムを装備します。不死のトーテムや空でないシュルカーボックスは装備できません。また、束縛の呪いが付いた装備すでにしている場合も同様です。
 

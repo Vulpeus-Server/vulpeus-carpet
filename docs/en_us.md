@@ -97,6 +97,24 @@ Optimize dragon respawn method. Ported from carpet AMS addition.
 
 ## Command
 
+### custom-load
+
+`/custom-load` : Show current custom loading chunk list.
+
+`/custom-load add [<dimension>] [<cx>] [<cz>] [<size>]` : add to list.
+
+`/custom-load remove [<dimension>] [<index>]` : remove from list.
+
+`[<dimension>]` : dimension id
+
+`[<cx>]` : x of the chunk at the center of the loading range.
+
+`[<cz>]` : z of the chunk at the center of the loading range.
+
+`[<size>]` : radius
+
+`[<index>]` : index of the list. you can check it with `/custom-load`.
+
 ### hat
 
 `/hat` : Equip the item you have on your own head. Totem of undying or non-empty shulker box cannot
