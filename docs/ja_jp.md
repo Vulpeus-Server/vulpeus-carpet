@@ -102,7 +102,7 @@ MC-254100 の修正
 
 `/custom-load` : 現在の CustomLoadingChunk のリストを表示。
 
-`/custom-load add [<dimension>] [<cx>] [<cz>] [<size>]` : リストに追加
+`/custom-load add [<dimension>] [<cx>] [<cz>] [<radius>]` : リストに追加
 
 `/custom-load remove [<dimension>] [<index>]` : リストから削除
 
@@ -112,7 +112,7 @@ MC-254100 の修正
 
 `[<cz>]` : ロード範囲の中心チャンクの ChunkZ
 
-`[<size>]` : 半径
+`[<radius>]` : 半径
 
 `[<index>]` : 要素のインデックス。`/custom-load`で確認できます。
 

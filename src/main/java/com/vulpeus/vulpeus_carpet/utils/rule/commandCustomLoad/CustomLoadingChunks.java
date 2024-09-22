@@ -45,27 +45,27 @@ public class CustomLoadingChunks {
 	public static class VulpeusTicket {
 		public ServerWorld serverWorld;
 		public ChunkPos chunkPos;
-		public int size;
+		public int radius;
 
-		VulpeusTicket(ServerWorld serverWorld, ChunkPos chunkPos, int size) {
+		VulpeusTicket(ServerWorld serverWorld, ChunkPos chunkPos, int radius) {
 			this.serverWorld = serverWorld;
 			this.chunkPos = chunkPos;
-			this.size = size;
+			this.radius = radius;
 		}
 	}
 
-	public static int add(ServerWorld world, ChunkPos chunkPos, int size) {
-		return add(new VulpeusTicket(world, chunkPos, size));
+	public static int add(ServerWorld world, ChunkPos chunkPos, int radius) {
+		return add(new VulpeusTicket(world, chunkPos, radius));
 	}
 	public static int add(VulpeusTicket ticket) {
-		ticket.serverWorld.getChunkManager().addTicket(VULPEUS, ticket.chunkPos, ticket.size, Unit.INSTANCE);
+		ticket.serverWorld.getChunkManager().addTicket(VULPEUS, ticket.chunkPos, ticket.radius, Unit.INSTANCE);
 		Tickets.add(ticket);
 		return Tickets.size()-1;
 	}
 
 	public static VulpeusTicket remove(int index) {
 		VulpeusTicket ticket = Tickets.get(index);
-		ticket.serverWorld.getChunkManager().removeTicket(VULPEUS, ticket.chunkPos, ticket.size, Unit.INSTANCE);
+		ticket.serverWorld.getChunkManager().removeTicket(VULPEUS, ticket.chunkPos, ticket.radius, Unit.INSTANCE);
 		Tickets.remove(index);
 		return ticket;
 	}
@@ -103,10 +103,10 @@ public class CustomLoadingChunks {
 					ChunkPos.getPackedZ(packedPos)
 			);
 
-			int size = Integer.parseInt(args[2]);
+			int radius = Integer.parseInt(args[2]);
 
 			tickets.add(
-					new VulpeusTicket(serverWorld, chunkPos, size)
+					new VulpeusTicket(serverWorld, chunkPos, radius)
 			);
 		}
 
@@ -119,10 +119,10 @@ public class CustomLoadingChunks {
 		for (VulpeusTicket ticket: tickets) {
 			String dim = ticket.serverWorld.getDimensionEntry().getKey().get().getValue().toString();
 			long pos = ticket.chunkPos.toLong();
-			int size = ticket.size;
+			int radius = ticket.radius;
 
 			raw.append(
-					String.format("%s %d %d\n", dim, pos, size)
+					String.format("%s %d %d\n", dim, pos, radius)
 			);
 		}
 

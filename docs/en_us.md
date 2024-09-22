@@ -101,7 +101,7 @@ Optimize dragon respawn method. Ported from carpet AMS addition.
 
 `/custom-load` : Show current custom loading chunk list.
 
-`/custom-load add [<dimension>] [<cx>] [<cz>] [<size>]` : add to list.
+`/custom-load add [<dimension>] [<cx>] [<cz>] [<radius>]` : add to list.
 
 `/custom-load remove [<dimension>] [<index>]` : remove from list.
 
@@ -111,7 +111,7 @@ Optimize dragon respawn method. Ported from carpet AMS addition.
 
 `[<cz>]` : z of the chunk at the center of the loading range.
 
-`[<size>]` : radius
+`[<radius>]` : radius
 
 `[<index>]` : index of the list. you can check it with `/custom-load`.
 

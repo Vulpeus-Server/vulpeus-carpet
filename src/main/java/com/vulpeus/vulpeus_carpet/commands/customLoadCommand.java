@@ -53,7 +53,7 @@ public class customLoadCommand {
 																		.then(
 																				CommandManager.argument("cz", IntegerArgumentType.integer())
 																						.then(
-																								CommandManager.argument("size", IntegerArgumentType.integer(0, 33))
+																								CommandManager.argument("radius", IntegerArgumentType.integer(0, 33))
 																										.executes(
 																												customLoadCommand::add
 																										)
@@ -81,11 +81,11 @@ public class customLoadCommand {
 		ServerWorld world = DimensionArgumentType.getDimensionArgument(context, "dim").toServerWorld();
 		int cx = IntegerArgumentType.getInteger(context, "cx");
 		int cz = IntegerArgumentType.getInteger(context, "cz");
-		int size = IntegerArgumentType.getInteger(context, "size");
+		int radius = IntegerArgumentType.getInteger(context, "radius");
 
 		ChunkPos chunk = new ChunkPos(cx, cz);
 
-		int index = CustomLoadingChunks.add(world, chunk, size);
+		int index = CustomLoadingChunks.add(world, chunk, radius);
 
 		ServerCommandSource source = context.getSource();
 
@@ -96,7 +96,7 @@ public class customLoadCommand {
 				"g ["+cx+","+cz+"]"
 		));
 		source.sendMessage(Messenger.c(
-				"w Radius: " + size
+				"w Radius: " + radius
 		));
 		source.sendMessage(Messenger.c());
 		status(context);
@@ -117,7 +117,7 @@ public class customLoadCommand {
 				"g ["+ticket.chunkPos.x+","+ticket.chunkPos.z+"]"
 		));
 		source.sendMessage(Messenger.c(
-				"w Radius: " + ticket.size
+				"w Radius: " + ticket.radius
 		));
 		source.sendMessage(Messenger.c());
 		status(context);
@@ -158,16 +158,16 @@ public class customLoadCommand {
 			String chunkPos = ticket.chunkPos.x + "," + ticket.chunkPos.z;
 
 			/*
-			 * Size
+			 * Radius
 			 */
-			String size = ticket.size + "";
+			String radius = ticket.radius + "";
 
 			context.getSource().sendMessage(
 					Messenger.c(
 							"w|-  ",
 							"w "+index+": ",
 							"w "+chunkPos+" ",
-							"w "+size+" ",
+							"w "+radius+" ",
 							coloredDim
 					)
 			);
