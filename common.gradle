@@ -20,6 +20,9 @@ repositories {
 	maven {
 		url 'https://masa.dy.fi/maven'
 	}
+	maven {
+		url 'https://api.modrinth.com/maven'
+	}
 }
 
 // https://github.com/FabricMC/fabric-loader/issues/783
@@ -33,9 +36,8 @@ dependencies {
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	modImplementation "carpet:fabric-carpet:${project.carpet_version}"
-
 	// dependencies
+	modImplementation "carpet:fabric-carpet:${project.carpet_version}"
 
 	// library mods
 //	include(modImplementation(fabricApi.module("fabric-resource-loader-v0", project.fabric_api_version)))
