@@ -63,7 +63,7 @@ yeet the server crash caused by StackOverflowError.
 
 ### fixedBeeNotLeavingHive (<=1.21.1)
 
-fixed MC-168329.
+fixed [MC-168329](https://bugs.mojang.com/browse/MC-168329).
 
 - Type: `boolean`
 - Default value: `false`
@@ -71,7 +71,7 @@ fixed MC-168329.
 
 ### fixedFallingBlockCantUseNetherPortal (<=1.20.6)
 
-fixed MC-9644.
+fixed [MC-9644](https://bugs.mojang.com/browse/MC-9644).
 
 - Type: `boolean`
 - Default value: `false`
@@ -79,7 +79,7 @@ fixed MC-9644.
 
 ### fixedTickMemoriesEntityAI (<=1.20.1)
 
-fixed MC-254100.
+fixed [MC-254100](https://bugs.mojang.com/browse/MC-254100).
 
 - Type: `boolean`
 - Default value: `false`
