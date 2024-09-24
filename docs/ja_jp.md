@@ -64,7 +64,7 @@ StackOverflowError によるサーバーのクラッシュの無効化。
 
 ### fixedBeeNotLeavingHive (<=1.21.1)
 
-MC-168329 の修正。
+[MC-168329](https://bugs.mojang.com/browse/MC-168329) の修正。
 
 - タイプ: `boolean`
 - デフォルト: `false`
@@ -72,7 +72,7 @@ MC-168329 の修正。
 
 ### fixedFallingBlockCantUseNetherPortal (<=1.20.6)
 
-MC-9644 の修正。
+[MC-9644](https://bugs.mojang.com/browse/MC-9644) の修正。
 
 - タイプ: `boolean`
 - デフォルト: `false`
@@ -80,7 +80,7 @@ MC-9644 の修正。
 
 ### fixedTickMemoriesEntityAI (<=1.20.1)
 
-MC-254100 の修正
+[MC-254100](https://bugs.mojang.com/browse/MC-254100) の修正
 
 - タイプ: `boolean`
 - デフォルト: `false`
