@@ -18,6 +18,6 @@
 
 ## Features
 
-Check [here](./docs) to see the document of all available options.
+Check [here](./docs/en_us.md) to see the document of all available options.
 
-[ここ](./docs) にすべての機能、設定が記述されているのでご確認ください。
+[ここ](./docs/ja_jp.md) にすべての機能、設定が記述されているのでご確認ください。
