@@ -7,6 +7,7 @@
     "MixinHUDController",
     "commandSit.MixinArmorStandEntity",
     "disableCrash.MixinMinecraftServer",
+    "fixed183518.MixinMinecraftServer",
     "fixedBeeNotLeavingHive.MixinBeehiveBlockEntity",
     "fixedFallingBlockCantUseNetherPortal.MixinFallingBlockEntity",
     "fixedTickMemoriesEntityAI.MixinMemory",
