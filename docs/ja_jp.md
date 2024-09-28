@@ -4,10 +4,10 @@
 
 `/custom-load`コマンドの有効化。AMS の blockChunkLoader から発想を得ました。
 
-- Type: `String`
-- Default value: `ops`
-- Allowed options: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
-- Categories: `SURVIVAL`, `COMMAND`, `VULPEUS`
+- タイプ: `String`
+- デフォルト: `ops`
+- 利用可能な項目: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
+- カテゴリー: `SURVIVAL`, `COMMAND`, `VULPEUS`
 
 ### commandHat
 
