@@ -4,87 +4,87 @@
 
 `/custom-load`コマンドの有効化。AMS の blockChunkLoader から発想を得ました。
 
-- タイプ: `String`
-- デフォルト: `ops`
-- 利用可能な項目: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
-- カテゴリー: `SURVIVAL`, `COMMAND`, `VULPEUS`
+- 型式: `String`
+- 既定値: `ops`
+- 使用可能な値: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
+- 分類: `SURVIVAL`, `COMMAND`, `VULPEUS`
 
 ### commandHat
 
 `/hat`コマンドの有効化。essential addons からの移植。
 
-- タイプ: `String`
-- デフォルト: `ops`
-- 利用可能な項目: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
-- カテゴリー: `SURVIVAL`, `COMMAND`, `VULPEUS`
+- 型式: `String`
+- 既定値: `ops`
+- 使用可能な値: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
+- 分類: `SURVIVAL`, `COMMAND`, `VULPEUS`
 
 ### commandSit
 
 `/sit`コマンドの有効化。PCA からの移植。
 
-- タイプ: `String`
-- デフォルト: `ops`
-- 利用可能な項目: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
-- カテゴリー: `SURVIVAL`, `COMMAND`, `VULPEUS`
+- 型式: `String`
+- 既定値: `ops`
+- 使用可能な値: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
+- 分類: `SURVIVAL`, `COMMAND`, `VULPEUS`
 
 ### commandView
 
 `/view`コマンドの有効化。
 carpet の viewDistance を変更することができる。
 
-- タイプ: `String`
-- デフォルト: `ops`
-- 利用可能な項目: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
-- カテゴリー: `SURVIVAL`, `COMMAND`, `VULPEUS`
+- 型式: `String`
+- 既定値: `ops`
+- 使用可能な値: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
+- 分類: `SURVIVAL`, `COMMAND`, `VULPEUS`
 
 ### defaultOpLevel
 
 サーバーに参加したときにデフォルトでOPを付与する。
 server.properties の`op-permission-level`を上書き可能。
 
-- タイプ: `int`
-- デフォルト: `0`
-- カテゴリー: `CREATIVE`,`VULPEUS`
+- 型式: `int`
+- 既定値: `0`
+- 分類: `CREATIVE`,`VULPEUS`
 
 ### disableCCECrash
 
 ClassCastException によるサーバーのクラッシュの無効化。
 
-- タイプ: `boolean`
-- デフォルト: `false`
-- カテゴリー: `VULPEUS`
+- 型式: `boolean`
+- 既定値: `false`
+- 分類: `VULPEUS`
 
 ### disableSOECrash
 
 StackOverflowError によるサーバーのクラッシュの無効化。
 
-- タイプ: `boolean`
-- デフォルト: `false`
-- カテゴリー: `VULPEUS`
+- 型式: `boolean`
+- 既定値: `false`
+- 分類: `VULPEUS`
 
 ### fixedBeeNotLeavingHive (<=1.21.1)
 
 [MC-168329](https://bugs.mojang.com/browse/MC-168329) の修正。
 
-- タイプ: `boolean`
-- デフォルト: `false`
-- カテゴリー: `BUGFIX`, `VULPEUS`
+- 型式: `boolean`
+- 既定値: `false`
+- 分類: `BUGFIX`, `VULPEUS`
 
 ### fixedFallingBlockCantUseNetherPortal (<=1.20.6)
 
 [MC-9644](https://bugs.mojang.com/browse/MC-9644) の修正。
 
-- タイプ: `boolean`
-- デフォルト: `false`
-- カテゴリー: `BUGFIX`, `VULPEUS`
+- 型式: `boolean`
+- 既定値: `false`
+- 分類: `BUGFIX`, `VULPEUS`
 
 ### fixedTickMemoriesEntityAI (<=1.20.1)
 
 [MC-254100](https://bugs.mojang.com/browse/MC-254100) の修正
 
-- タイプ: `boolean`
-- デフォルト: `false`
-- カテゴリー: `BUGFIX`, `VULPEUS`
+- 型式: `boolean`
+- 既定値: `false`
+- 分類: `BUGFIX`, `VULPEUS`
 
 ### optmizedDragonRespawn
 
@@ -92,9 +92,9 @@ StackOverflowError によるサーバーのクラッシュの無効化。
 > [!WARNING]
 > このルールはバニラと同一の挙動を保証しません。
 
-- タイプ: `boolean`
-- デフォルト: `false`
-- カテゴリー: `OPTIMIZATION`, `VULPEUS`
+- 型式: `boolean`
+- 既定値: `false`
+- 分類: `OPTIMIZATION`, `VULPEUS`
 
 ## コマンド
 
