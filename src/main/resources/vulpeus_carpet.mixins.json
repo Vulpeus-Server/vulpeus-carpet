@@ -10,6 +10,7 @@
     "fixedBeeNotLeavingHive.MixinBeehiveBlockEntity",
     "fixedFallingBlockCantUseNetherPortal.MixinFallingBlockEntity",
     "fixedTickMemoriesEntityAI.MixinMemory",
+    "logEntityCount.MixinServerWorld",
     "optimizedDragonRespawn.IMixinBlockPatternTestTransform",
     "optimizedDragonRespawn.MixinEnderDragonFight",
     "playerActions.PlayerCommandMixin",

@@ -23,14 +23,22 @@ package com.vulpeus.vulpeus_carpet.loggers;
 import carpet.logging.HUDLogger;
 import carpet.logging.LoggerRegistry;
 import com.vulpeus.vulpeus_carpet.loggers.hud.autosave;
+import com.vulpeus.vulpeus_carpet.loggers.hud.entity_count;
 import java.lang.reflect.Field;
 
 public class VulpeusLoggerRegistry {
 
 	public static boolean __autosave;
+	public static boolean __entity_count;
 
 	public static void registerLoggers(){
 		LoggerRegistry.registerLogger(autosave.NAME, standardHUDLogger(autosave.NAME, null, null));
+		LoggerRegistry.registerLogger(entity_count.NAME, standardHUDLogger(entity_count.NAME, null, null));
+	}
+
+	public static void updateHUD() {
+		doHudLogging(__autosave, autosave.getInstance());
+		doHudLogging(__entity_count, entity_count.getInstance());
 	}
 
 	public static HUDLogger standardHUDLogger(String logName, String def, String [] options) {
@@ -44,10 +52,6 @@ public class VulpeusLoggerRegistry {
 		catch (NoSuchFieldException e) {
 			throw new RuntimeException();
 		}
-	}
-
-	public static void updateHUD() {
-		doHudLogging(__autosave, autosave.getInstance());
 	}
 
 	private static void doHudLogging(boolean condition, AbstractHUDLogger logger) {
