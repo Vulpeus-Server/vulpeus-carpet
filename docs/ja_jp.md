@@ -96,6 +96,16 @@ StackOverflowError によるサーバーのクラッシュの無効化。
 - 既定値: `false`
 - 分類: `OPTIMIZATION`, `VULPEUS`
 
+### visibleSpectators
+
+スペクテーターのプレイヤーをスペクテーターではないプレイヤーから見えるようにする。totots carpet tweaks からの移植。
+
+![visibleSpectators](assets/visibleSpectators.png)
+
+- 型式: `boolean`
+- 既定値: `false`
+- 分類: `SURVIVAL`, `VULPEUS`
+
 ## コマンド
 
 ### custom-load
