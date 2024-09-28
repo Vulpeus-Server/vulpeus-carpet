@@ -144,3 +144,13 @@ StackOverflowError によるサーバーのクラッシュの無効化。
 `[<name>]` : fake player の名前
 
 `[<state>]` : `true` か `false`
+
+## ロガー
+
+### autosave
+
+`/log autosave`
+
+オートセーブされてからの時間と、次のオートセーブまでの時間をプレイヤーリストに表示。
+このロガーはサーバー開始からのチックから算出されるため、正確ではない場合があることに留意してください。
+essential addons からの移植。
