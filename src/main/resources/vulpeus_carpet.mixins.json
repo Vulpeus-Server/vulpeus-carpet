@@ -4,6 +4,7 @@
   "package": "com.vulpeus.vulpeus_carpet.mixins",
   "compatibilityLevel": "{{COMPATIBILITY_LEVEL}}",
   "mixins": [
+    "MixinHUDController",
     "commandSit.MixinArmorStandEntity",
     "disableCrash.MixinMinecraftServer",
     "fixedBeeNotLeavingHive.MixinBeehiveBlockEntity",
