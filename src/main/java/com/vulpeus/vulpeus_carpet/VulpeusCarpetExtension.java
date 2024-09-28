@@ -28,6 +28,7 @@ import com.vulpeus.vulpeus_carpet.commands.customLoadCommand;
 import com.vulpeus.vulpeus_carpet.commands.hatCommand;
 import com.vulpeus.vulpeus_carpet.commands.sitCommand;
 import com.vulpeus.vulpeus_carpet.commands.viewCommand;
+import com.vulpeus.vulpeus_carpet.loggers.VulpeusLoggerRegistry;
 import com.vulpeus.vulpeus_carpet.utils.rule.commandCustomLoad.CustomLoadingChunks;
 import com.vulpeus.vulpeus_carpet.utils.ScriptCollection;
 import com.vulpeus.vulpeus_carpet.utils.rule.defaultOpLevel.PlayerUtil;
@@ -104,6 +105,11 @@ public class VulpeusCarpetExtension implements CarpetExtension, ModInitializer {
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	@Override
+	public void registerLoggers() {
+		VulpeusLoggerRegistry.registerLoggers();
 	}
 
 	@Override

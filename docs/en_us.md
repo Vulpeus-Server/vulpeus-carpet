@@ -148,3 +148,31 @@ binding.
 `[<name>]` : fake player name
 
 `[<state>]` : `true` or `false`
+
+## Logger
+
+### autosave
+
+`/log autosave`
+
+Simple logger that display when the server will autosave and how long ago the last autosave was.
+This logger does not directly detect autosave, but rather a calculated value based on the time elapsed since the server started, which could be incorrect.
+Ported from essential addons.
+
+### entity_count
+
+![logEntityCount](assets/logEntityCount.png)
+
+`/log entity_count`
+
+`/log entity_count [<entities>]`
+
+Display counts of entities per dimension and the total number in the player list.
+
+`[<entities>]` : entity id. you can input multiple values separated by commas.
+
+※ if `:` is included, argument must be enclosed in double quotes.
+```
+/log entity_count player
+/log entity_count "minecraft:player,minecraft:iron_golem"
+```
