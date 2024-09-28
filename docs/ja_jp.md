@@ -154,3 +154,21 @@ StackOverflowError によるサーバーのクラッシュの無効化。
 オートセーブされてからの時間と、次のオートセーブまでの時間をプレイヤーリストに表示。
 このロガーはサーバー開始からのチックから算出されるため、正確ではない場合があることに留意してください。
 essential addons からの移植。
+
+### entity_count
+
+![logEntityCount](assets/logEntityCount.png)
+
+`/log entity_count`
+
+`/log entity_count [<entities>]`
+
+ディメンション毎と合計のエンティティの数をプレイヤーリストに表示。
+
+`[<entities>]` : エンティティID。カンマ区切りで複数入力することも可能。`minecraft:`の接頭語は省略可。
+
+※ `:`を含める場合は引数全体をダブルクォーテーションで囲う必要があります。
+```
+/log entity_count player
+/log entity_count "minecraft:player,minecraft:iron_golem"
+```
