@@ -95,6 +95,16 @@ Optimize dragon respawn method. Ported from carpet AMS addition.
 - Default value: `false`
 - Categories: `OPTIMIZATION`, `VULPEUS`
 
+### visibleSpectators
+
+Makes spectators visible to non-spectator players. Ported from totos carpet tweaks.
+
+![visibleSpectators](assets/visibleSpectators.png)
+
+- Type: `boolean`
+- Default value: `false`
+- Categories: `SURVIVAL`, `VULPEUS`
+
 ## Command
 
 ### custom-load

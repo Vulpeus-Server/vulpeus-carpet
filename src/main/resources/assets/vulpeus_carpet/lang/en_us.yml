@@ -35,3 +35,6 @@ carpet:
 
     optimizedDragonRespawn:
       desc: Optimize dragon respawn method. Ported from carpet AMS addition.
+
+    visibleSpectators:
+      desc: Makes spectators visible to non-spectator players. Ported from totos carpet tweaks.

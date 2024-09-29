@@ -14,7 +14,8 @@
     "optimizedDragonRespawn.IMixinBlockPatternTestTransform",
     "optimizedDragonRespawn.MixinEnderDragonFight",
     "playerActions.PlayerCommandMixin",
-    "playerActions.ServerPlayerEntityMixin"
+    "playerActions.ServerPlayerEntityMixin",
+    "visibleSpectators.MixinServerPlayerEntity"
   ],
   "client": [
   ],
