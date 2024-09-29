@@ -18,7 +18,7 @@
  * along with VulpeusCarpet.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.vulpeus.vulpeus_carpet.mixins.fixed183518;
+package com.vulpeus.vulpeus_carpet.mixins.fixMC183518;
 
 import com.vulpeus.vulpeus_carpet.VulpeusCarpetSettings;
 import java.util.concurrent.locks.LockSupport;
@@ -57,7 +57,7 @@ public abstract class MixinMinecraftServer {
 		final long beforeParkNanosMeasuringTimeNano = pushTickTimeLog ? Util.getMeasuringTimeNano() : 0L;
 
 		final long nanos;
-		if (VulpeusCarpetSettings.fixed183518 && this.waitingForNextTickNew) {
+		if (VulpeusCarpetSettings.fixMC183518 && this.waitingForNextTickNew) {
 			nanos = this.tickStartTimeNanos - Util.getMeasuringTimeNano();
 		} else {
 			nanos = 100000L;

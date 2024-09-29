@@ -24,7 +24,7 @@ carpet:
     disableSOECrash:
       desc: yeet the server crash caused by StackOverflowError.
 
-    fixed183518:
+    fixMC183518:
       desc: fixed MC-183518
 
     fixedBeeNotLeavingHive:

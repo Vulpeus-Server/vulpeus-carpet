@@ -49,11 +49,6 @@ public class VulpeusCarpetSettings {
   @Rule(categories = {VULPEUS})
   public static boolean disableSOECrash = false;
 
-  //#if MC<=12002
-  @Rule(categories = {BUGFIX, OPTIMIZATION, VULPEUS})
-  //#endif
-  public static boolean fixed183518 = false;
-
   //#if MC<=12101
   //$$ @Rule(categories = {BUGFIX, VULPEUS})
   //#endif
@@ -68,6 +63,11 @@ public class VulpeusCarpetSettings {
   //$$ @Rule(categories = {BUGFIX, VULPEUS})
   //#endif
   public static boolean fixedTickMemoriesEntityAI = false;
+
+  //#if MC<=12002
+  @Rule(categories = {BUGFIX, OPTIMIZATION, VULPEUS})
+  //#endif
+  public static boolean fixMC183518 = false;
 
   @Rule(categories = {OPTIMIZATION, VULPEUS})
   public static boolean optimizedDragonRespawn = false;
