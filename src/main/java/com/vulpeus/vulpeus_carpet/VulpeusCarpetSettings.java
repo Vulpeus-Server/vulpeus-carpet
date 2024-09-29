@@ -67,4 +67,7 @@ public class VulpeusCarpetSettings {
   @Rule(categories = {OPTIMIZATION, VULPEUS})
   public static boolean optimizedDragonRespawn = false;
 
+  @Rule(categories = {SURVIVAL, VULPEUS})
+  public static boolean visibleSpectators = false;
+
 }
