@@ -49,6 +49,9 @@ public class VulpeusCarpetSettings {
   @Rule(categories = {VULPEUS})
   public static boolean disableSOECrash = false;
 
+  @Rule(categories = {VULPEUS})
+  public static boolean disableIAECrash = false;
+
   //#if MC<=12101
   //$$ @Rule(categories = {BUGFIX, VULPEUS})
   //#endif
