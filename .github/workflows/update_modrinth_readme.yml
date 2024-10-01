@@ -3,7 +3,7 @@ name: Update Modrinth Readme
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   update_modrinth_readme:
     runs-on: ubuntu-latest
@@ -17,6 +17,6 @@ jobs:
       - name: Install dependencies
         run: pip install requests rich
       - name: Run Python Script
-        run: python .github/workflows/scripts/update_modrinth_readme.py aZhtZo3k README.md
+        run: python .github/workflows/scripts/update_modrinth_readme.py aZhtZo3k Modrinth.md
         env:
           SECRET: ${{ secrets.MODRINTH_API_TOKEN }}
