@@ -29,7 +29,10 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-@Restriction(require = @Condition(value = "minecraft", versionPredicates = "<=1.21.1"))
+@Restriction(
+		require = @Condition(value = "minecraft", versionPredicates = "<=1.21.1"),
+		conflict = @Condition(value = "carpet-fixes")
+)
 @Mixin(BeehiveBlockEntity.class)
 public class MixinBeehiveBlockEntity {
 	@Redirect(
