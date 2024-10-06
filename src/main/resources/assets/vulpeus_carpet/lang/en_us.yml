@@ -9,6 +9,9 @@ carpet:
     commandHat:
       desc: Enable `/hat` command. Ported from essential addons.
 
+    commandSimulation:
+      desc: Enable `/simulation` command to change simulationDistance of carpet.
+
     commandSit:
       desc: Enable `/sit` command. Ported from PCA.
 

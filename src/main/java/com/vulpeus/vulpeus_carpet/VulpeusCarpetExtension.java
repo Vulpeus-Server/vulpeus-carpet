@@ -26,6 +26,7 @@ import carpet.utils.Translations;
 import com.mojang.brigadier.CommandDispatcher;
 import com.vulpeus.vulpeus_carpet.commands.customLoadCommand;
 import com.vulpeus.vulpeus_carpet.commands.hatCommand;
+import com.vulpeus.vulpeus_carpet.commands.simulationCommand;
 import com.vulpeus.vulpeus_carpet.commands.sitCommand;
 import com.vulpeus.vulpeus_carpet.commands.viewCommand;
 import com.vulpeus.vulpeus_carpet.loggers.VulpeusLoggerRegistry;
@@ -116,6 +117,7 @@ public class VulpeusCarpetExtension implements CarpetExtension, ModInitializer {
 	public void registerCommands(CommandDispatcher<ServerCommandSource> dispatcher, CommandRegistryAccess commandRegistryAccess) {
 		customLoadCommand.register(dispatcher);
 		viewCommand.register(dispatcher);
+		simulationCommand.register(dispatcher);
 		hatCommand.register(dispatcher);
 		sitCommand.register(dispatcher);
 	}

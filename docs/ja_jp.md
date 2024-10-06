@@ -18,6 +18,16 @@
 - 使用可能な値: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
 - 分類: `SURVIVAL`, `COMMAND`, `VULPEUS`
 
+### commandSimulation
+
+`/simulation`コマンドの有効化。
+carpet の simulation を変更することができる。
+
+- 型式: `String`
+- 既定値: `ops`
+- 使用可能な値: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
+- 分類: `SURVIVAL`, `COMMAND`, `VULPEUS`
+
 ### commandSit
 
 `/sit`コマンドの有効化。PCA からの移植。
@@ -129,6 +139,14 @@ StackOverflowError によるサーバーのクラッシュの無効化。
 ### hat
 
 `/hat` : 頭に所持しているアイテムを装備します。不死のトーテムや空でないシュルカーボックスは装備できません。また、束縛の呪いが付いた装備すでにしている場合も同様です。
+
+### simulation
+
+`/simulation` : 現在の演算距離設定を表示します。
+
+`/simulation [<distance>]` : carpet での simulationDistance を変更します。
+
+`[<distance>]` : 0 から 32 でなければなりません。
 
 ### sit
 

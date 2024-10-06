@@ -18,6 +18,15 @@ Enable `/hat` command. Ported from essential addons.
 - Allowed options: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
 - Categories: `SURVIVAL`, `COMMAND`, `VULPEUS`
 
+### commandSimulation
+
+Enable `/simulation` command to change simulationDistance of carpet.
+
+- Type: `String`
+- Default value: `ops`
+- Allowed options: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
+- Categories: `SURVIVAL`, `COMMAND`, `VULPEUS`
+
 ### commandSit
 
 Enable `/sit` command. Ported from PCA.
@@ -136,6 +145,14 @@ binding.
 `/hat` : Equip the item you have on your own head. Totem of undying or non-empty shulker box cannot
 be equipped.Also you cannot use this command if you already equip the item enchanted curse of
 binding.
+
+### simulation
+
+`/simulation` :  display current simulationDistance
+
+`/simulation [<distance>]` : change the value of simulationDistance in carpet
+
+`[<distance>]` : must be between `0` to `32`
 
 ### sit
 

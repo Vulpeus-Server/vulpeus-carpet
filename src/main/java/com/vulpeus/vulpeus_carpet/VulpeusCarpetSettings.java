@@ -35,6 +35,9 @@ public class VulpeusCarpetSettings {
   public static String commandHat = "ops";
 
   @Rule(categories = {SURVIVAL, COMMAND, VULPEUS})
+  public static String commandSimulation = "ops";
+
+  @Rule(categories = {SURVIVAL, COMMAND, VULPEUS})
   public static String commandSit = "ops";
 
   @Rule(categories = {SURVIVAL, COMMAND, VULPEUS})
