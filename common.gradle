@@ -42,6 +42,9 @@ dependencies {
 	if (project.carpet_fixes_version) {
 		modRuntimeOnly "maven.modrinth:carpet-fixes:${project.carpet_fixes_version}"
 	}
+	if (project.carpet_tis_version) {
+		modRuntimeOnly "maven.modrinth:carpet-tis-addition:${project.carpet_tis_version}"
+	}
 
 	// library mods
 //	include(modImplementation(fabricApi.module("fabric-resource-loader-v0", project.fabric_api_version)))
