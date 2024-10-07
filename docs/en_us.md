@@ -65,7 +65,8 @@ yeet the server crash caused by StackOverflowError.
 
 fixed [MC-168329](https://bugs.mojang.com/browse/MC-168329).
 > [!WARNING]
-> this is not working when use with carpet-fixes
+> This will not work when used with carpet-fixes.<br>
+> Please use carpet-fixes `beeNotLeavingHiveFix`.
 
 - Type: `boolean`
 - Default value: `false`
