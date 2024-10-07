@@ -65,6 +65,8 @@ StackOverflowError によるサーバーのクラッシュの無効化。
 ### fixedBeeNotLeavingHive (<=1.21.1)
 
 [MC-168329](https://bugs.mojang.com/browse/MC-168329) の修正。
+> [!WARNING]
+> carpet-fixesと一緒に使用すると動作しません。
 
 - 型式: `boolean`
 - 既定値: `false`
