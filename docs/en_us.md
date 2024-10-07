@@ -53,6 +53,14 @@ yeet the server crash caused by ClassCastException.
 - Default value: `false`
 - Categories: `VULPEUS`
 
+### disableIAECrash
+
+yeet the server crash caused by IllegalArgumentException.
+
+- Type: `boolean`
+- Default value: `false`
+- Categories: `VULPEUS`
+
 ### disableSOECrash
 
 yeet the server crash caused by StackOverflowError.

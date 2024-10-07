@@ -21,6 +21,9 @@ carpet:
     disableCCECrash:
       desc: yeet the server crash caused by ClassCastException.
 
+    disableIAECrash:
+      desc: yeet the server crash caused by IllegalArgumentException.
+
     disableSOECrash:
       desc: yeet the server crash caused by StackOverflowError.
 

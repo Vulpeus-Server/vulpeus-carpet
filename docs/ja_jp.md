@@ -54,6 +54,14 @@ ClassCastException によるサーバーのクラッシュの無効化。
 - 既定値: `false`
 - 分類: `VULPEUS`
 
+### disableIAECrash
+
+IllegalArgumentException によるサーバーのクラッシュの無効化。
+
+- Type: `boolean`
+- Default value: `false`
+- Categories: `VULPEUS`
+
 ### disableSOECrash
 
 StackOverflowError によるサーバーのクラッシュの無効化。
