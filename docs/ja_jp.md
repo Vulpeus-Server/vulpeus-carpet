@@ -166,7 +166,7 @@ StackOverflowError によるサーバーのクラッシュの無効化。
 ### playerActions
 
 > [!NOTE]
-> fakePlayer でのみ利用可能です。
+> fakePlayer でのみ利用可能。
 
 `/player [<name>] fill [<state>]` : コンテナを開いたときにインベントリの中身をすべて入れる。
 

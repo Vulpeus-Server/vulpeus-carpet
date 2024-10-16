@@ -172,6 +172,9 @@ binding.
 
 ### playerActions
 
+> [!NOTE]
+> Only use fake players
+
 `/player [<name>] fill [<state>]`
 
 `/player [<name>] clean [<state>]`

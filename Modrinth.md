@@ -94,6 +94,20 @@ override `op-permission-level` in the server.properties.
 
 yeet the server crash caused by ClassCastException.
 
+> <font size="3" color="#ff4500">WARNING</font><br>
+> Faster than others, but a more dangerous.
+
+- Type: `boolean`
+- Default value: `false`
+- Categories: `VULPEUS`
+
+### disableIAECrash
+
+yeet the server crash caused by IllegalArgumentException.
+
+> <font size="3" color="#ff4500">WARNING</font><br>
+> Faster than others, but a more dangerous.
+
 - Type: `boolean`
 - Default value: `false`
 - Categories: `VULPEUS`
@@ -102,6 +116,9 @@ yeet the server crash caused by ClassCastException.
 
 yeet the server crash caused by StackOverflowError.
 
+> <font size="3" color="#ff4500">WARNING</font><br>
+> Faster than others, but a more dangerous.
+
 - Type: `boolean`
 - Default value: `false`
 - Categories: `VULPEUS`
@@ -109,6 +126,10 @@ yeet the server crash caused by StackOverflowError.
 ### fixedBeeNotLeavingHive (<=1.21.1)
 
 fixed [MC-168329](https://bugs.mojang.com/browse/MC-168329).
+
+> <font size="3" color="#1f6feb">NOTE</font><br>
+> This will not work when used with carpet-fixes.<br>
+> Please use carpet-fixes `beeNotLeavingHiveFix`.
 
 - Type: `boolean`
 - Default value: `false`
@@ -133,7 +154,7 @@ fixed [MC-254100](https://bugs.mojang.com/browse/MC-254100).
 ### optmizedDragonRespawn
 
 Optimize dragon respawn method. Ported from carpet AMS addition.
-> [!WARNING]
+> <font size="3" color="#ff4500">WARNING</font><br>
 > Couldn’t ensure same behavior as vanilla Minecraft after enabling this rule.
 
 - Type: `boolean`
@@ -196,6 +217,9 @@ binding.
 
 ### playerActions
 
+> <font size="3" color="#1f6feb">NOTE</font><br>
+> Only use fake players
+
 `/player [<name>] fill [<state>]`
 
 `/player [<name>] clean [<state>]`
@@ -227,7 +251,6 @@ Display counts of entities per dimension and the total number in the player list
 `[<entities>]` : entity id. you can input multiple values separated by commas.
 
 ※ if `:` is included, argument must be enclosed in double quotes.
-
 ```
 /log entity_count player
 /log entity_count "minecraft:player,minecraft:iron_golem"
@@ -290,11 +313,28 @@ server.properties の`op-permission-level`を上書き可能。
 
 ClassCastException によるサーバーのクラッシュの無効化。
 
+> <font size="3" color="#ff4500">WARNING</font><br>
+> 他と比べてより速いが、より危険。
+
+- 型式: `boolean`
+- 既定値: `false`
+- 分類: `VULPEUS`
+
+### disableIAECrash
+
+IllegalArgumentException によるサーバーのクラッシュの無効化。
+
+> <font size="3" color="#ff4500">WARNING</font><br>
+> 他と比べてより速いが、より危険。
+
 - 型式: `boolean`
 - 既定値: `false`
 - 分類: `VULPEUS`
 
 ### disableSOECrash
+
+> <font size="3" color="#ff4500">WARNING</font><br>
+> 他と比べてより速いが、より危険。
 
 StackOverflowError によるサーバーのクラッシュの無効化。
 
@@ -305,6 +345,10 @@ StackOverflowError によるサーバーのクラッシュの無効化。
 ### fixedBeeNotLeavingHive (<=1.21.1)
 
 [MC-168329](https://bugs.mojang.com/browse/MC-168329) の修正。
+
+> <font size="3" color="#1f6feb">NOTE</font><br>
+> carpet-fixesと併用した場合、機能しなくなります。<br>
+> carpet-fixesの`beeNotLeavingHiveFix`を使用してください。
 
 - 型式: `boolean`
 - 既定値: `false`
@@ -329,7 +373,8 @@ StackOverflowError によるサーバーのクラッシュの無効化。
 ### optmizedDragonRespawn
 
 エンダードラゴンのリスポーン処理の最適化。carpet AMS addition からの移植。
-> [!WARNING]
+
+> <font size="3" color="#ff4500">WARNING</font><br>
 > このルールはバニラと同一の挙動を保証しません。
 
 - 型式: `boolean`
@@ -384,7 +429,7 @@ StackOverflowError によるサーバーのクラッシュの無効化。
 
 ### playerActions
 
-> [!NOTE]
+> <font size="3" color="#1f6feb">NOTE</font><br>
 > fakePlayer でのみ利用可能です。
 
 `/player [<name>] fill [<state>]` : コンテナを開いたときにインベントリの中身をすべて入れる。
@@ -418,7 +463,6 @@ essential addons からの移植。
 `[<entities>]` : エンティティID。カンマ区切りで複数入力することも可能。`minecraft:`の接頭語は省略可。
 
 ※ `:`を含める場合は引数全体をダブルクォーテーションで囲う必要があります。
-
 ```
 /log entity_count player
 /log entity_count "minecraft:player,minecraft:iron_golem"
