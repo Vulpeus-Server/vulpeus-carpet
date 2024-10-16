@@ -50,6 +50,9 @@ server.properties の`op-permission-level`を上書き可能。
 
 ClassCastException によるサーバーのクラッシュの無効化。
 
+> [!WARNING]
+> 他と比べてより速いが、より危険。
+
 - 型式: `boolean`
 - 既定値: `false`
 - 分類: `VULPEUS`
@@ -58,11 +61,17 @@ ClassCastException によるサーバーのクラッシュの無効化。
 
 IllegalArgumentException によるサーバーのクラッシュの無効化。
 
-- Type: `boolean`
-- Default value: `false`
-- Categories: `VULPEUS`
+> [!WARNING]
+> 他と比べてより速いが、より危険。
+
+- 型式: `boolean`
+- 既定値: `false`
+- 分類: `VULPEUS`
 
 ### disableSOECrash
+
+> [!WARNING]
+> 他と比べてより速いが、より危険。
 
 StackOverflowError によるサーバーのクラッシュの無効化。
 
@@ -73,7 +82,8 @@ StackOverflowError によるサーバーのクラッシュの無効化。
 ### fixedBeeNotLeavingHive (<=1.21.1)
 
 [MC-168329](https://bugs.mojang.com/browse/MC-168329) の修正。
-> [!WARNING]
+
+> [!NOTE]
 > carpet-fixesと併用した場合、機能しなくなります。<br>
 > carpet-fixesの`beeNotLeavingHiveFix`を使用してください。
 

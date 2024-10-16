@@ -49,6 +49,9 @@ override `op-permission-level` in the server.properties.
 
 yeet the server crash caused by ClassCastException.
 
+> [!WARNING]
+> Faster than others, but a more dangerous.
+
 - Type: `boolean`
 - Default value: `false`
 - Categories: `VULPEUS`
@@ -56,6 +59,9 @@ yeet the server crash caused by ClassCastException.
 ### disableIAECrash
 
 yeet the server crash caused by IllegalArgumentException.
+
+> [!WARNING]
+> Faster than others, but a more dangerous.
 
 - Type: `boolean`
 - Default value: `false`
@@ -65,6 +71,9 @@ yeet the server crash caused by IllegalArgumentException.
 
 yeet the server crash caused by StackOverflowError.
 
+> [!WARNING]
+> Faster than others, but a more dangerous.
+
 - Type: `boolean`
 - Default value: `false`
 - Categories: `VULPEUS`
@@ -72,7 +81,8 @@ yeet the server crash caused by StackOverflowError.
 ### fixedBeeNotLeavingHive (<=1.21.1)
 
 fixed [MC-168329](https://bugs.mojang.com/browse/MC-168329).
-> [!WARNING]
+
+> [!NOTE]
 > This will not work when used with carpet-fixes.<br>
 > Please use carpet-fixes `beeNotLeavingHiveFix`.
 
