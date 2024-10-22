@@ -30,6 +30,7 @@ import net.minecraft.nbt.NbtElement;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -37,6 +38,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(ArmorStandEntity.class)
 public abstract class MixinArmorStandEntity extends LivingEntity implements SitEntity {
 
+  @Unique
   private boolean sitEntity = false;
 
   protected MixinArmorStandEntity(EntityType<? extends LivingEntity> entityType, World world) {
@@ -62,7 +64,7 @@ public abstract class MixinArmorStandEntity extends LivingEntity implements SitE
   protected void removePassenger(Entity passenger) {
     if (this.isSitEntity()) {
       this.setPosition(this.getX(), this.getY() + 0.16, this.getZ());
-      this.kill();
+      this.remove(RemovalReason.KILLED);
     }
     super.removePassenger(passenger);
   }
