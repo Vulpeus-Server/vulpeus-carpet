@@ -2,7 +2,7 @@
  * This file is part of the VulpeusCarpet project, licensed under the
  * GNU Lesser General Public License v3.0
  *
- * Copyright (C) 2024  Fallen_Breath and contributors
+ * Copyright (C) 2024  VulpeusServer and contributors
  *
  * VulpeusCarpet is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -17,7 +17,6 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with VulpeusCarpet.  If not, see <https://www.gnu.org/licenses/>.
  */
-
 package com.vulpeus.vulpeus_carpet.utils.rule.optimizedDragonRespawn;
 
 import com.google.common.cache.LoadingCache;

@@ -2,7 +2,7 @@
  * This file is part of the VulpeusCarpet project, licensed under the
  * GNU Lesser General Public License v3.0
  *
- * Copyright (C) 2024  Fallen_Breath and contributors
+ * Copyright (C) 2024  VulpeusServer and contributors
  *
  * VulpeusCarpet is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
